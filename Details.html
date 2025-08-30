@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <title> Details</title>
+  <style>
+    body {
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      background-color: aliceblue;
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      border: 3px solid black;
+      width: 300px;
+      height: 200px;
+      border-radius: 15px;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form p {
+      margin: 10px 0;
+      text-align: left;
+    }
+
+    span {
+      text-decoration: underline;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <p><strong>Your Name is:</strong> <span id="name"></span></p>
+    <p><strong>Your Email is:</strong> <span id="email"></span></p>
+    <p><strong>Your Address is:</strong> <span id="address"></span></p>
+    <p><strong>Your Phone No.is:</strong> <span id="phone"></span></p>
+    <p><strong>your Date of Birth is:</strong> <span id="userDob"></span></p>
+    <p><strong>Your Password is:</strong> <span id="Password"></span></p>
+
+    <script>
+      document.getElementById("name").innerHTML = localStorage.getItem("name");
+      document.getElementById("email").innerHTML = localStorage.getItem("email");
+      document.getElementById("address").innerHTML = localStorage.getItem("address");
+      document.getElementById("phone").innerHTML = localStorage.getItem("phone");
+      document.getElementById("userDob").innerHTML = localStorage.getItem("dob");
+      document.getElementById("Password").innerHTML = localStorage.getItem("password");
+    </script>
+  </form>
+</body>
+
+</html>

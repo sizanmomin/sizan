@@ -1,0 +1,145 @@
+<html>
+
+<head>
+   <title> Registration Form</title>
+   <script>
+      function passvalues() {
+         var name = document.getElementById("name").value;
+         var email = document.getElementById("email").value;
+         var address = document.getElementById("address").value;
+         var phone = document.getElementById("phone").value;
+         var dob = document.getElementById("dob").value;
+         var password = document.getElementById("password").value;
+
+         localStorage.setItem("name", name);
+         localStorage.setItem("email", email);
+         localStorage.setItem("address", address);
+         localStorage.setItem("phone", phone);
+         localStorage.setItem("dob", dob);
+         localStorage.setItem("password", password);
+
+         return;
+      }
+   </script>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: Arial, sans-serif;
+      }
+
+      body {
+         background-color: aliceblue;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         flex-direction: column;
+         font-size: larger;
+      }
+
+      h1 {
+         background-color: blue;
+         width: 1500px;
+         height: 50px;
+         padding: 7px;
+         text-align: center;
+         color: white;
+      }
+
+      form {
+         padding: 30px;
+         width: 400px;
+      }
+
+      fieldset {
+         border: 2px solid #000;
+         padding: 20px;
+         border-radius: 10px;
+         background-color: #fdfdfd;
+      }
+
+      legend {
+         font-weight: bold;
+         font-size: 18px;
+         margin-bottom: 10px;
+         text-align: center;
+      }
+
+      label {
+         display: block;
+         margin-bottom: 5px;
+         font-size: 14px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="date"],
+      input[type="address"] {
+         width: 100%;
+         padding: 8px;
+         margin-bottom: 15px;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+      }
+
+
+      input[type="submit"],
+      button[type="reset"] {
+         padding: 10px 20px;
+         margin-right: 10px;
+         border: none;
+         background-color: #4CAF50;
+         color: white;
+         border-radius: 5px;
+         cursor: pointer;
+      }
+
+      button[type="reset"] {
+         background-color: #f44336;
+      }
+
+      input[type="submit"]:hover,
+      button[type="reset"]:hover {
+         opacity: 0.9;
+      }
+   </style>
+</head>
+
+<body>
+   <h1>Registrtion Form</h1>
+   <form action="Details.html">
+      <fieldset>
+
+         <legend>Registration</legend>
+
+         <label>Name :</label>
+         <input type="text" id="name" placeholder="Enter your name"><br><br>
+
+         <label>Email :</label>
+         <input type="email" id="email" placeholder="Enter your email"><br><br>
+
+         <label>S.password : </label>
+         <input type="password" id="password" placeholder="Set strong password"><br><br>
+
+         <label> C.password : </label>
+         <input type="password" id="password" placeholder="confirm the password"><br><br>
+
+         <label> Address : </label>
+         <input type="address" id="address" placeholder="Enter your address"><br><br>
+
+         <label> Phone : </label>
+         <input type="text" id="phone" placeholder="Enter your phone no."><br><br>
+
+         <label> Date of birth : </label>
+         <input type="date" id="dob"><br><br>
+
+         <input type="submit" value="submit" onclick="passvalues()" />
+         <button type="reset">Reset</button>
+      </fieldset>
+   </form>
+</body>
+
+</html>
